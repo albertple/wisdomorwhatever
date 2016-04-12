@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<style>
+	
+	a:link {text-decoration:none;}
+	a:visited {text-decoration:none;}
+	body {
+		position:relative;
+		top:200px;
+		margin-left:auto;
+		margin-right:auto;
+		text-align:center;
+		width: 50%;
+		font-family: helvetica, arial;
+	}
+	#quote {
+		font-size:2em;}
+	#button {
+		font-size:1.3em;
+	}
+
+</style>
+
+</head>
+
+<body>
+
+	<p id="quote">
+		{% if compiled %}
+			{{ compiled|join:"" }}
+		{% else %}
+			<p>No quotes for you.</p>
+		{% endif %}
+	</p>
+
+	<a href="http://127.0.0.1:8000/funnyquotes/" id="button">Unspire Me More</a>
+</body>
